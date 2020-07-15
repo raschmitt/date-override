@@ -12,7 +12,7 @@ jobs:
 
     runs-on: windows-latest
     env:
-      working-directory: DateOverride
+      working-directory: /DateOverride
 
     steps:
     - uses: actions/checkout@v2
