@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateOverride", "DateOverride\DateOverride.csproj", "{1AA6A19D-5DC7-445F-A8B2-39CFF87D1F16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateOverrideTests", "DateOverrideTests\DateOverrideTests.csproj", "{FE9D7C32-1071-4F30-8602-93F0DBE88207}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{1AA6A19D-5DC7-445F-A8B2-39CFF87D1F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AA6A19D-5DC7-445F-A8B2-39CFF87D1F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AA6A19D-5DC7-445F-A8B2-39CFF87D1F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9D7C32-1071-4F30-8602-93F0DBE88207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9D7C32-1071-4F30-8602-93F0DBE88207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE9D7C32-1071-4F30-8602-93F0DBE88207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9D7C32-1071-4F30-8602-93F0DBE88207}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
