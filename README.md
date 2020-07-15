@@ -17,4 +17,4 @@ To be continued...
 
 ## Constributions
 
-  Contibutions and feature requests are always welcome.
+  Contributions and feature requests are always welcome.
