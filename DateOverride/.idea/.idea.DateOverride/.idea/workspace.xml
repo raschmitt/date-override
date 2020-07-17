@@ -22,11 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2e38d27-a922-4ca4-a1bb-6ad01a4dce48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DateOverride/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DateOverride/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DateOverride/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DateOverride/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DateOverride/DateOverride.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DateOverride/DateOverride.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="b2e38d27-a922-4ca4-a1bb-6ad01a4dce48" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

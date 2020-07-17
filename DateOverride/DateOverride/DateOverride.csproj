@@ -5,12 +5,8 @@
         <PackageId>DateOverride</PackageId>
         <Version>1.0.3</Version>
         <Authors>Rogerio Schmitt</Authors>
-        <PackageIcon>icon.png</PackageIcon>
+        <PackageIconUrl>https://raw.githubusercontent.com/raschmitt/date-override/master/DateOverride/DateOverride/icon.png</PackageIconUrl>
         <PackageProjectUrl>https://github.com/raschmitt/date-override</PackageProjectUrl>
     </PropertyGroup>
-    
-    <ItemGroup>
-        <None Include="icon.png"/>
-    </ItemGroup>
-    
+   
 </Project>
