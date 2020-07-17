@@ -3,7 +3,8 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>DateOverride</PackageId>
-        <Version>1.0.3</Version>
+        <Version>1.0.4</Version>
+        <Description>Simple solution for mocking date properties with private setters</Description>
         <Authors>Rogerio Schmitt</Authors>
         <PackageIconUrl>https://raw.githubusercontent.com/raschmitt/date-override/master/DateOverride/DateOverride/icon.png</PackageIconUrl>
         <PackageProjectUrl>https://github.com/raschmitt/date-override</PackageProjectUrl>
