@@ -3,8 +3,14 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>DateOverride</PackageId>
-        <Version>1.0.2</Version>
+        <Version>1.0.3</Version>
         <Authors>Rogerio Schmitt</Authors>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageProjectUrl>https://github.com/raschmitt/date-override</PackageProjectUrl>
     </PropertyGroup>
-
+    
+    <ItemGroup>
+        <None Include="icon.png"/>
+    </ItemGroup>
+    
 </Project>

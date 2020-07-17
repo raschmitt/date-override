@@ -15,6 +15,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="DateOverride.cs" t="Include" />
         <e p="DateOverride.csproj" t="IncludeRecursive" />
+        <e p="icon.png" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
