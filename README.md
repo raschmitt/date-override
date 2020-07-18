@@ -48,7 +48,7 @@ public void Should_set_DateTime()
     var tomorrow = DateTime.Now.AddDays(1);
     
     //Act
-    item.SetDate(nameof(sut.CreatedAt), tomorrow);
+    item.SetDate(nameof(item.CreatedAt), tomorrow);
     
     //Assert
     item.Date.Should().BeAfter(today);
