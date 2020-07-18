@@ -1,13 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <PackageId>DateOverride</PackageId>
-        <Version>1.0.4</Version>
-        <Description>Simple solution for mocking date properties with private setters</Description>
         <Authors>Rogerio Schmitt</Authors>
+        <Description>Simple solution for mocking date properties with private setters</Description>
         <PackageIconUrl>https://raw.githubusercontent.com/raschmitt/date-override/master/DateOverride/DateOverride/icon.png</PackageIconUrl>
+        <PackageId>DateOverride</PackageId>
         <PackageProjectUrl>https://github.com/raschmitt/date-override</PackageProjectUrl>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Tags>Time DateTime DateTimeOffset Mock MockDate</Tags>
+        <Version>1.0.4</Version> 
     </PropertyGroup>
    
 </Project>
