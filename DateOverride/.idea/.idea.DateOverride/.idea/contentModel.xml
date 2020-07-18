@@ -12,17 +12,7 @@
     <e p="C:\Users\rogerio.schmitt\AppData\Roaming\JetBrains\Rider2020.2\scratches" t="IncludeRecursive" />
     <e p="C:\Users\rogerio.schmitt\Documents\dev\date-override\DateOverride" t="IncludeFlat">
       <e p="DateOverride" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="DateOverride.cs" t="Include" />
         <e p="DateOverride.csproj" t="IncludeRecursive" />
-        <e p="icon.png" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="DateOverride.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
       </e>
       <e p="DateOverride.sln" t="IncludeFlat" />
       <e p="DateOverrideTests" t="IncludeRecursive">
