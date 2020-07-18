@@ -1,8 +1,6 @@
 # DateOverride <img src="https://raw.githubusercontent.com/raschmitt/date-override/master/DateOverride/DateOverride/icon.png" align='right' />
 ![.NET Core - Build & Test](https://github.com/raschmitt/date-override/workflows/.NET%20Core%20-%20Build%20&%20Test/badge.svg) ![Nuget Deploy](https://github.com/raschmitt/date-override/workflows/Nuget%20Deploy/badge.svg)
 
--bacontest
-
 DateOverride is a simple solution for mocking date properties with private setters in C#.
 
 ## Dependencies
