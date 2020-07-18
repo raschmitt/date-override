@@ -3,6 +3,9 @@ name: Nuget Deploy
 on:
   push:
     branches: [ master ]
+    paths-ignore:
+    - '**/README.md'
+    - '**/*.yml'
 
 jobs:
   build:
