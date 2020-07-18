@@ -35,7 +35,7 @@ Where:
 ```c#
 public class Item
 {
-  public DateTime CreatedAt { get; private set; }
+    public DateTime CreatedAt { get; private set; }
 }
 
 [Fact]
