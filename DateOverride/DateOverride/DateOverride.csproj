@@ -6,9 +6,9 @@
         <PackageIconUrl>https://raw.githubusercontent.com/raschmitt/date-override/master/DateOverride/DateOverride/icon.png</PackageIconUrl>
         <PackageId>DateOverride</PackageId>
         <PackageProjectUrl>https://github.com/raschmitt/date-override</PackageProjectUrl>
+        <PackageTags>Time DateTime DateTimeOffset Mock MockDate</PackageTags>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <Tags>Time DateTime DateTimeOffset Mock MockDate</Tags>
-        <Version>1.0.5</Version> 
+        <Version>1.0.6</Version> 
     </PropertyGroup>
    
 </Project>
