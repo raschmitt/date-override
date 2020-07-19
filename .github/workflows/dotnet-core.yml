@@ -22,7 +22,7 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
-      run: dotnet restore && choco install opencover.portable && choco install xunit
+      run: dotnet restore && choco install opencover.portable -y && choco install xunit -y
       working-directory: DateOverride
     - name: Build
       run: dotnet build --configuration Release --no-restore
