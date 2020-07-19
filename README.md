@@ -1,7 +1,8 @@
 # DateOverride <img src="https://raw.githubusercontent.com/raschmitt/date-override/master/DateOverride/DateOverride/icon.png" align='right' />
-![.NET Core - Build & Test](https://github.com/raschmitt/date-override/workflows/.NET%20Core%20-%20Build%20&%20Test/badge.svg) ![Nuget Deploy](https://github.com/raschmitt/date-override/workflows/Nuget%20Deploy/badge.svg)
 
--bacontest
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/raschmitt/date-override/.NET%20Core%20-%20Build%20&%20Test?label=Build%20%26%20Test&style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/raschmitt/date-override/Nuget%20Deploy?label=Deploy&style=flat-square)
+![Nuget](https://img.shields.io/nuget/v/DateOverride?label=Nuget&style=flat-square)
 
 DateOverride is a simple solution for mocking date properties with private setters in C#.
 
