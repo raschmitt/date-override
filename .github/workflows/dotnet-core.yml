@@ -30,6 +30,7 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
       working-directory: DateOverride
-    - name: Upload test results to - Codecov
-      uses: codecov/codecov-action@v1.0.11
+    - name: Upload test results to Codecov
+      run: bash <(curl -s https://codecov.io/bash
+      working-directory: DateOverride
 
