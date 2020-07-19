@@ -39,11 +39,8 @@ jobs:
     - name: Install OpenCover
       run: choco install opencover.portable -y
 
-    - name: Install .NET Core SDK
-      run: choco install dotnetcore-sdk -y
-
     - name: Generate cover report
-      run: OpenCover.Console.exe -target:"dotnet.exe" -targetargs:test -register:user
+      run: OpenCover.Console.exe -target:"dotnet.exe" -targetargs:test -register:user -oldstyle
 
     - name: Publish cover report
       uses: codecov/codecov-action@v1.0.11
