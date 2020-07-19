@@ -22,5 +22,5 @@ jobs:
       run: dotnet pack
       working-directory: DateOverride
     - name: Deploy to nuget.org
-      run: dotnet nuget push *.nupkg -k ${{ secrets.NUGET_DEPLOY_KEY }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push *.nupkg -k ${{ secrets.NUGET_DEPLOY_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
       working-directory: DateOverride/DateOverride/bin/Debug
