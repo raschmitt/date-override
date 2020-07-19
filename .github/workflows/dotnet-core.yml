@@ -46,7 +46,7 @@ jobs:
       run: OpenCover.Console.exe -target:"xunit.console.x86.exe" -targetargs:".\DateOverrideTests\bin\Debug\netcoreapp3.1\DateOverrideTests.dll -noshadow" -filter:"+[UnitTestTargetProject*]* -[DateOverrideTests*]*" -output:".\DateOverride_coverage.xml"
 
     - name: Publish cover report
-      run: curl -s https://codecov.io/bash
+      uses: codecov/codecov-action@v1.0.11
 
     
 
