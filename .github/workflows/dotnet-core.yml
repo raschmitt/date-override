@@ -43,10 +43,8 @@ jobs:
       run: choco install xunit -y
 
     - name: Generate cover report
-      run: OpenCover.Console.exe -target:"xunit.console.x86.exe" -targetargs:".\DateOverrideTests\bin\Debug\netcoreapp3.1\DateOverrideTests.dll -noshadow" -filter:"+[UnitTestTargetProject*]* -[DateOverrideTests*]*" -output:".\DateOverride_coverage.xml"
+      run: OpenCover.Console.exe -register:user -target:"dotnet.exe" -targetargs:test -filter:"+[UnitTestTargetProject*]* -[DateOverrideTests*]*" -output:".\DateOverride_coverage.xml" -oldstyle
 
     - name: Publish cover report
       uses: codecov/codecov-action@v1.0.11
-
-    
-
+  
