@@ -39,8 +39,8 @@ jobs:
     - name: Install OpenCover
       run: choco install opencover.portable -y
 
-    - name: Install xUnit console runner
-      run: choco install xunit -y
+    - name: Install .NET Core SDK
+      run: choco install dotnetcore-sdk -y
 
     - name: Generate cover report
       run: OpenCover.Console.exe -target:"dotnet.exe" -targetargs:test -register:user
