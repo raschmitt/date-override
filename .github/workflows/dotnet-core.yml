@@ -13,27 +13,41 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest      
+    runs-on: windows-latest 
+    defaults:
+      run:
+        working-directory: DateOverride     
 
     steps:
     - uses: actions/checkout@v2
+      
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
+      
     - name: Install dependencies
-      run: dotnet restore && choco install opencover.portable -y && choco install xunit -y
+      run: dotnet restore
       working-directory: DateOverride
+      
     - name: Build
       run: dotnet build --configuration Release --no-restore
-      working-directory: DateOverride
+#       working-directory: DateOverride
+            
     - name: Test
       run: dotnet test --no-restore --verbosity normal
-      working-directory: DateOverride
-    - name: Publish tests results
-      run: dotnet test --no-restore --verbosity normal
-      working-directory: DateOverride
-    - name: Upload tests results to Codecov
+#       working-directory: DateOverride
+    
+    - name: Install OpenCover
+      run: choco install opencover.portable -y
+#       working-directory: DateOverride
+
+    - name: Generate cover report
       run: OpenCover.Console.exe -target:"xunit.console.x86.exe" -targetargs:".\DateOverrideTests\bin\Debug\netcoreapp3.1\DateOverrideTests.dll -noshadow" -filter:"+[UnitTestTargetProject*]* -[DateOverrideTests*]*" -output:".\DateOverride_coverage.xml"
-      working-directory: DateOverride
+#       working-directory: DateOverride
+
+    - name: Publish cover report
+      run: curl -s https://codecov.io/bash
+
+    
 
