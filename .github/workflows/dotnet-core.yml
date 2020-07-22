@@ -33,13 +33,13 @@ jobs:
       run: dotnet build --configuration Release --no-restore
             
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../lcov /p:CopyLocalLockFileAssemblies=true
     
     - name: Install OpenCover
       run: choco install opencover.portable -y
 
-    - name: Generate cover report
-      run: OpenCover.Console.exe -target:"dotnet.exe" -targetargs:test -register:user -oldstyle
+#     - name: Generate cover report
+#       run: OpenCover.Console.exe -target:"dotnet.exe" -targetargs:test -register:user -oldstyle
 
     - name: Publish cover report
       uses: codecov/codecov-action@v1.0.11
