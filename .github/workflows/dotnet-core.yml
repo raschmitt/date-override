@@ -28,7 +28,6 @@ jobs:
       
     - name: Install dependencies
       run: dotnet restore
-      working-directory: DateOverride
       
     - name: Build
       run: dotnet build --configuration Release --no-restore
