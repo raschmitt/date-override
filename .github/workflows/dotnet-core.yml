@@ -33,7 +33,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
             
     - name: Test
-      run: dotnet test --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../lcov /p:CopyLocalLockFileAssemblies=true
+      run: dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../lcov /p:CopyLocalLockFileAssemblies=true
     
 #     - name: Install OpenCover
 #       run: choco install opencover.portable -y
