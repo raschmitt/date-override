@@ -5,7 +5,7 @@
 [![Nuget](https://img.shields.io/nuget/v/DateOverride?label=Nuget&style=flat-square)](https://www.nuget.org/packages/DateOverride/)
 [![Nuget](https://img.shields.io/nuget/dt/DateOverride?color=Blue&label=Downloads&style=flat-square)](https://www.nuget.org/stats/packages/DateOverride?groupby=Version)
 
-DateOverride is a simple solution for mocking date properties with private setters in C#
+DateOverride is a simple solution for mocking date properties with private setters in C#.
 
 ## Dependencies
 
