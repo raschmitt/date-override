@@ -351,3 +351,6 @@ MigrationBackup/
 
 # Text files
 *.txt
+
+# Rider cache/options directory
+.idea/
