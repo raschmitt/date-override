@@ -28,23 +28,25 @@ jobs:
       
     - name: Install dependencies
       run: dotnet restore
-      working-directory: DateOverride
       
     - name: Build
       run: dotnet build --configuration Release --no-restore
             
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../lcov /p:CopyLocalLockFileAssemblies=true
     
-    - name: Install OpenCover
-      run: choco install opencover.portable -y
+#     - name: Install OpenCover
+#       run: choco install opencover.portable -y
 
-    - name: Install xUnit console runner
-      run: choco install xunit -y
+#     - name: Generate cover report
+#       run: OpenCover.Console.exe -target:"dotnet.exe" -targetargs:test -register:user -oldstyle
 
-    - name: Generate cover report
-      run: OpenCover.Console.exe -register:user -target:"dotnet.exe" -targetargs:test -filter:"+[UnitTestTargetProject*]* -[DateOverrideTests*]*" -output:".\DateOverride_coverage.xml" -oldstyle
+#     - name: Publish cover report
+#       uses: codecov/codecov-action@v1.0.11
 
-    - name: Publish cover report
-      uses: codecov/codecov-action@v1.0.11
+    - name: Codecov
+      uses: codecov/codecov-action@v1.0.12
+      with:
+        directory: DateOverride/*
+
   
