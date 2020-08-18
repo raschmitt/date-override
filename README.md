@@ -60,6 +60,6 @@ public void Should_set_DateTime()
     
 ```
 
-## Constributions
+## Contributions
 
   Contributions and feature requests are always welcome.
