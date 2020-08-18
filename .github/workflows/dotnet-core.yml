@@ -39,14 +39,12 @@ jobs:
       run: choco install opencover.portable
 
     - name: Generate cover report
-      run: OpenCover.Console.exe -target:"dotnet.exe" -targetargs:test -register:Path64 -oldstyle
-
-    - name: Publish cover report
-      uses: codecov/codecov-action@v1.0.11
+      run: OpenCover.Console.exe -target:"dotnet.exe" -targetargs:test -register:user -oldstyle
+      working-directory: DateOverrideTests   
 
     - name: Codecov
       uses: codecov/codecov-action@v1.0.12
       with:
-        directory: /*
+        directory: DateOverrideTests
 
   
