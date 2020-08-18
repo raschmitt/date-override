@@ -35,18 +35,18 @@ jobs:
     - name: Test
       run: dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../lcov /p:CopyLocalLockFileAssemblies=true
     
-    - name: Install OpenCover
-      run: choco install opencover.portable
+#     - name: Install OpenCover
+#       run: choco install opencover.portable
 
-    - name: Generate cover report
-      run: OpenCover.Console.exe -target:"dotnet.exe" -targetargs:test -register:Path64 -oldstyle
+#     - name: Generate cover report
+#       run: OpenCover.Console.exe -target:"dotnet.exe" -targetargs:test -register:Path64 -oldstyle
 
-    - name: Publish cover report
-      uses: codecov/codecov-action@v1.0.11
+#     - name: Publish cover report
+#       uses: codecov/codecov-action@v1.0.11
 
     - name: Codecov
       uses: codecov/codecov-action@v1.0.12
       with:
-        directory: DateOverride/*
+        directory: *
 
   
