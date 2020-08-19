@@ -26,27 +26,14 @@ jobs:
       with:
         dotnet-version: 3.1.101
       
-    - name: Install dependencies
-      run: dotnet restore
-      
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build
             
+    - name: Install Coverlet
+      run: dotnet tool install -g coverlet.console
+
     - name: Test
-      run: dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../lcov /p:CopyLocalLockFileAssemblies=true
-    
-#     - name: Install OpenCover
-#       run: choco install opencover.portable -y
+      run: coverlet ./DateOverrideTests/bin/Debug/netcoreapp3.1/DateOverrideTests.dll -t dotnet -a "test --no-build" -f opencover
 
-#     - name: Generate cover report
-#       run: OpenCover.Console.exe -target:"dotnet.exe" -targetargs:test -register:user -oldstyle
-
-#     - name: Publish cover report
-#       uses: codecov/codecov-action@v1.0.11
-
-    - name: Codecov
-      uses: codecov/codecov-action@v1.0.12
-      with:
-        directory: DateOverride/*
-
-  
+    - name: Upload report to code
+      uses: codecov/codecov-action@v1.0.13
