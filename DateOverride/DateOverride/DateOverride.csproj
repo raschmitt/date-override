@@ -2,13 +2,13 @@
 
     <PropertyGroup>
         <Authors>Rogerio Schmitt</Authors>
-        <Description>Simple solution for mocking date properties with private setters</Description>
-        <PackageIconUrl>https://raw.githubusercontent.com/raschmitt/date-override/master/DateOverride/DateOverride/icon.png</PackageIconUrl>
+        <Description>Mock date properties with private setters</Description>
+        <PackageIconUrl>https://raw.githubusercontent.com/raschmitt/date-override/master/icon.png</PackageIconUrl>
         <PackageId>DateOverride</PackageId>
         <PackageProjectUrl>https://github.com/raschmitt/date-override</PackageProjectUrl>
         <PackageTags>Time DateTime DateTimeOffset Mock MockDate</PackageTags>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <Version>1.0.7</Version>
+        <Version>1.0.8</Version>
 
         <DebugType>full</DebugType>
     </PropertyGroup>
