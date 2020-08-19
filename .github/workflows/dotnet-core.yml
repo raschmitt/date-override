@@ -32,19 +32,15 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
             
-    - name: Test
-      run: dotnet test --no-restore
+#     - name: Test
+#       run: dotnet test --no-restore
     
-    - name: Install OpenCover
-      run: choco install opencover.portable
+    - name: Install Coverlet
+      run: dotnet tool install -g coverlet.console
 
-    - name: Generate cover report
-      run: OpenCover.Console.exe -target:"dotnet.exe" -filter:"+[DateOverride*]*" -targetargs:test -register:user -oldstyle
-      working-directory: DateOverride/DateOverrideTests   
+    - name: Test
+      run: coverlet DateOverrideTests/bin/Debug/netcoreapp3.1/DateOverrideTests.dll -t "dotnet" -a "test --no-build" -f opencover
 
-    - name: Codecov
-      uses: codecov/codecov-action@v1.0.12
-      with:
-        directory: DateOverride/DateOverrideTests
+    - name: Upload report to code
+      uses: codecov/codecov-action@v1.0.13
 
-  
