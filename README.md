@@ -1,4 +1,4 @@
-# DateOverride <img src="https://raw.githubusercontent.com/raschmitt/date-override/master/DateOverride/DateOverride/icon.png" align='right' />
+# DateOverride <img src="https://raw.githubusercontent.com/raschmitt/date-override/master/icon.png" align='right' />
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/raschmitt/date-override/.NET%20Core%20-%20Build%20&%20Test?label=Build%20%26%20Test&style=flat-square)](https://github.com/raschmitt/date-override/actions?query=workflow%3A%22.NET+Core+-+Build+%26+Test%22)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/raschmitt/date-override/Nuget%20Deploy?label=Deploy&style=flat-square)](https://github.com/raschmitt/date-override/actions?query=workflow%3A%22Nuget+Deploy%22)
