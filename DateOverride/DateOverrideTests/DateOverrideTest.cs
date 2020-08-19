@@ -38,5 +38,21 @@ namespace DateOverrideTests
             //Assert
             sut.Date.Should().BeAfter(today);
         }
+        
+        [Fact]
+        public void Should_not_throw_null_ref_for_empty_field_name()
+        {
+            //Arrange
+            var sut = new TestEntity<DateTimeOffset>();
+
+            var tomorrow = DateTimeOffset.Now.AddDays(1);
+            
+            //Act
+            Action act = () => sut.SetDate("", tomorrow);
+            
+            //Assert
+            sut.Date.Should().Be(default);
+            act.Should().NotThrow();
+        }
     }
 }
