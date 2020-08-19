@@ -40,10 +40,7 @@ jobs:
 
     - name: Test
       run: |
-        dir
-        
-        cd DateOverrideTests/bin/Debug/netcoreapp3.1/
-        dir
+        tree
         
         coverlet ./DateOverrideTests/bin/Debug/netcoreapp3.1/DateOverrideTests.dll -t dotnet -a "test --no-build" -f opencover
 
