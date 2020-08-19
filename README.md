@@ -2,6 +2,7 @@
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/raschmitt/date-override/.NET%20Core%20-%20Build%20&%20Test?label=Build%20%26%20Test&style=flat-square)](https://github.com/raschmitt/date-override/actions?query=workflow%3A%22.NET+Core+-+Build+%26+Test%22)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/raschmitt/date-override/Nuget%20Deploy?label=Deploy&style=flat-square)](https://github.com/raschmitt/date-override/actions?query=workflow%3A%22Nuget+Deploy%22)
+[![Codecov](https://img.shields.io/codecov/c/github/raschmitt/date-override?label=Code%20Coverage&style=flat-square)](https://codecov.io/gh/raschmitt/date-override)
 [![Nuget](https://img.shields.io/nuget/v/DateOverride?label=Nuget&style=flat-square)](https://www.nuget.org/packages/DateOverride/)
 [![Nuget](https://img.shields.io/nuget/dt/DateOverride?color=Blue&label=Downloads&style=flat-square)](https://www.nuget.org/stats/packages/DateOverride?groupby=Version)
 
@@ -15,18 +16,22 @@ DateOverride is a simple solution for mocking date properties with private sette
 
 - ### Package Manager Console
 
-`Install-Package DateOverride`
+```
+Install-Package DateOverride
+```
 
 - ### .Net CLI
 
-`dotnet add package DateOverride`
+```
+dotnet add package DateOverride
+```
 
 ## How to use
 
 DateOverride can set any `DateTime` or `DateTimeOffset` property, with the `SetDate()` extension method, trough the following syntax:
 
 ```c#
-  object.SetDate(property, date);
+object.SetDate(property, date);
 ```
 Where:
 
