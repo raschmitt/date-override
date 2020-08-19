@@ -10,7 +10,7 @@ DateOverride is a simple solution for mocking date properties with private sette
 
 ## Dependencies
 
-- .NETStandard 2.0
+- [.NETStandard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
 
 ## Install
 
