@@ -11,6 +11,9 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+variables:
+- group: date-override
+
 steps:
   - task: PowerShell@2
     displayName: 'Get solution path'
