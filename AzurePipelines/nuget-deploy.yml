@@ -45,9 +45,11 @@ steps:
       nobuild: true
       versioningScheme: 'off'
 
-  - task: DotNetCoreCLI@2
+  - task: PowerShell@2
+    displayName: 'Publish package'
     inputs:
-      command: 'custom'
-      projects: '**/*.nupkg'
-      custom: 'nuget push'
-      arguments: '-k $(NUGET_API_KEY) -s https://api.nuget.org/v3/index.json --skip-duplicate'
+      targetType: 'inline'
+      script: |
+        $package = Get-ChildItem -Filter *.nupkg -Recurse | Select-Object -Expand FileName -First 1
+
+        dotnet nuget push $package -k $(NUGET_API_KEY) -s https://api.nuget.org/v3/index.json --skip-duplicate
