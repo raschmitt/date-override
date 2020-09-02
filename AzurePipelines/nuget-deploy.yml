@@ -53,6 +53,6 @@ steps:
     inputs:
       targetType: 'inline'
       script: |
-        $package = Get-ChildItem -Filter *.nupkg -Recurse | Select-Object -Expand FileName -First 1
+        $package = Get-ChildItem -Filter *.nupkg -Recurse | Select-Object -Expand FullName -First 1
 
         dotnet nuget push $package -k $(NUGET_API_KEY) -s https://api.nuget.org/v3/index.json --skip-duplicate
