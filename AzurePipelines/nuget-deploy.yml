@@ -41,10 +41,8 @@ steps:
   - task: PowerShell@2
     displayName: 'Publish package'
     inputs:
+      workingDirectory: $(Build.ArtifactStagingDirectory)
       targetType: 'inline'
       script: |
-        $package = Get-ChildItem -Filter *.nupkg -Recurse | Select-Object -Expand FullName -First 1
-
         dir
-
-        dotnet nuget push $(Build.ArtifactStagingDirectory)/*.nupkg -k $(NUGET_API_KEY) -s https://api.nuget.org/v3/index.json --skip-duplicate
+        dotnet nuget push *.nupkg -k $(NUGET_API_KEY) -s https://api.nuget.org/v3/index.json --skip-duplicate
