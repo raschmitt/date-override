@@ -55,4 +55,6 @@ steps:
       script: |
         $package = Get-ChildItem -Filter *.nupkg -Recurse | Select-Object -Expand FullName -First 1
 
-        dotnet nuget push $package -k $(NUGET_API_KEY) -s https://api.nuget.org/v3/index.json --skip-duplicate
+        Write-Output $package
+
+        dotnet nuget push "$package" -k $(NUGET_API_KEY) -s https://api.nuget.org/v3/index.json --skip-duplicate
