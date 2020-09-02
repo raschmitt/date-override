@@ -14,36 +14,12 @@ pool:
 variables:
 - group: date-override
 
-steps:
-  - task: DotNetCoreCLI@2
-    displayName: 'Build'
-    inputs:
-      command: 'build'
-      projects: '**/*.csproj'
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      ref: refs/heads/master
+      name: pipeline-templates
 
-  - task: DotNetCoreCLI@2
-    displayName: 'Test'
-    inputs:
-      command: 'test'
-      publishTestResults: false
-      projects: |
-        **\*Tests.dll
-        !**\obj\**
-      testRunTitle: 'Test'
-
-  - task: DotNetCoreCLI@2
-    displayName: 'Pack'
-    inputs:
-      command: 'pack'
-      packagesToPack: '**\*.csproj;!**\*Tests.csproj'
-      nobuild: true
-      versioningScheme: 'off'
-
-  - task: PowerShell@2
-    displayName: 'Publish package'
-    inputs:
-      workingDirectory: $(Build.ArtifactStagingDirectory)
-      targetType: 'inline'
-      script: |
-        dir
-        dotnet nuget push *.nupkg -k $(NUGET_API_KEY) -s https://api.nuget.org/v3/index.json --skip-duplicate
+extends:
+  template: Deploy\nuget.yml@templates
