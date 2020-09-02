@@ -41,9 +41,8 @@ steps:
     displayName: 'Pack'
     inputs:
       command: 'pack'
-      packagesToPack: |
-          **\*.csproj
-          !**\*Tests.csproj
+      packagesToPack: '**\*.csproj;!**\*Tests.csproj'
+      nobuild: true
       versioningScheme: 'off'
 
   - task: DotNetCoreCLI@2
