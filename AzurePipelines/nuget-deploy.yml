@@ -1,30 +1,54 @@
-name: Nuget Deploy
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - '**/*.csproj'
+    exclude:
+    - '**/*Tests.csproj'
 
-on:
-  push:
-    branches: [ master ]
-    paths-ignore:
-    - '**/README.md'
-    - '**/*.yml'
-  workflow_dispatch:
+pool:
+  vmImage: 'windows-latest'
 
-jobs:
-  build:
+steps:
+  - task: PowerShell@2
+    displayName: 'Get solution path'
+    inputs:
+      targetType: 'inline'
+      script: |
+        $solutionPath = Get-ChildItem -Filter *.sln -Recurse | Select-Object -Expand Directory -First 1
 
-    runs-on: windows-latest
+        Write-Host "##vso[task.setvariable variable=solutionPath]$solutionPath"
 
-    steps:
-    - uses: actions/checkout@v2
-      
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.101
+  - task: DotNetCoreCLI@2
+    displayName: 'Build'
+    inputs:
+      command: 'build'
+      workingDirectory: "$(solutionPath)"
 
-    - name: Generate Nuget package
-      run: dotnet pack
-      working-directory: DateOverride
+  - task: DotNetCoreCLI@2
+    displayName: 'Test'
+    inputs:
+      command: 'test'
+      publishTestResults: false
+      projects: |
+        **\*Tests.dll
+        !**\obj\**
+      testRunTitle: 'Test'
 
-    - name: Deploy to nuget.org
-      run: dotnet nuget push *.nupkg -k ${{ secrets.NUGET_DEPLOY_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
-      working-directory: DateOverride/DateOverride/bin/Debug
+  - task: DotNetCoreCLI@2
+    displayName: 'Pack'
+    inputs:
+      command: 'pack'
+      packagesToPack: |
+          **\*.csproj
+          !**\*Tests.csproj
+      versioningScheme: 'off'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'custom'
+      projects: '**/*.nupkg'
+      custom: 'nuget push'
+      arguments: '-k $(NUGET_API_KEY) -s https://api.nuget.org/v3/index.json --skip-duplicate'
