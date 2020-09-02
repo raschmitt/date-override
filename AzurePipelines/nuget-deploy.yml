@@ -15,20 +15,10 @@ variables:
 - group: date-override
 
 steps:
-  - task: PowerShell@2
-    displayName: 'Get solution path'
-    inputs:
-      targetType: 'inline'
-      script: |
-        $solutionPath = Get-ChildItem -Filter *.sln -Recurse | Select-Object -Expand Directory -First 1
-
-        Write-Host "##vso[task.setvariable variable=solutionPath]$solutionPath"
-
   - task: DotNetCoreCLI@2
-    displayName: 'Build'
     inputs:
       command: 'build'
-      workingDirectory: "$(solutionPath)"
+      projects: '**/*.csproj'
 
   - task: DotNetCoreCLI@2
     displayName: 'Test'
@@ -55,6 +45,6 @@ steps:
       script: |
         $package = Get-ChildItem -Filter *.nupkg -Recurse | Select-Object -Expand FullName -First 1
 
-        Write-Output $package
+        dir
 
-        dotnet nuget push "$package" -k $(NUGET_API_KEY) -s https://api.nuget.org/v3/index.json --skip-duplicate
+        dotnet nuget push *.nupkg -k $(NUGET_API_KEY) -s https://api.nuget.org/v3/index.json --skip-duplicate
