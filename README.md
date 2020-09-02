@@ -1,8 +1,8 @@
 # DateOverride [<img src="https://raw.githubusercontent.com/raschmitt/date-override/master/icon.png" align='right' />](https://github.com/raschmitt/date-override)
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/raschmitt/date-override/.NET%20Core%20-%20Build%20&%20Test?label=Build%20%26%20Test&style=flat-square)](https://github.com/raschmitt/date-override/actions?query=workflow%3A%22.NET+Core+-+Build+%26+Test%22)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/raschmitt/date-override/Nuget%20Deploy?label=Deploy&style=flat-square)](https://github.com/raschmitt/date-override/actions?query=workflow%3A%22Nuget+Deploy%22)
-[![Codecov](https://img.shields.io/codecov/c/github/raschmitt/date-override?label=Code%20Coverage&style=flat-square)](https://codecov.io/gh/raschmitt/date-override)
+[![Azure DevOps builds](https://img.shields.io/azure-devops/build/raschmitt/7618d927-8467-43e2-b5e9-1aeddc1fbfdc/15?label=Build%20%26%20Test&style=flat-square)](https://dev.azure.com/raschmitt/raschmitt/_build?definitionId=15)
+[![Azure DevOps builds](https://img.shields.io/azure-devops/build/raschmitt/7618d927-8467-43e2-b5e9-1aeddc1fbfdc/17?label=Deploy&style=flat-square)](https://dev.azure.com/raschmitt/raschmitt/_build?definitionId=17)
+[![Sonar Coverage](https://img.shields.io/sonar/coverage/raschmitt_date-override?label=Code%20Coverage&server=https%3A%2F%2Fsonarcloud.io&style=flat-square)](https://sonarcloud.io/dashboard?id=raschmitt_date-override)
 [![Nuget](https://img.shields.io/nuget/v/DateOverride?label=Nuget&style=flat-square)](https://www.nuget.org/packages/DateOverride/)
 [![Nuget](https://img.shields.io/nuget/dt/DateOverride?color=Blue&label=Downloads&style=flat-square)](https://www.nuget.org/stats/packages/DateOverride?groupby=Version)
 
