@@ -62,7 +62,6 @@ public void Should_set_DateTime()
     //Assert
     item.Date.Should().BeAfter(today);
 }
-    
 ```
 
 ## Contributions
