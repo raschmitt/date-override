@@ -8,7 +8,7 @@ resources:
   repositories:
     - repository: templates
       type: git
-      ref: refs/heads/master
+      ref: refs/tags/old
       name: pipeline-templates
 
 extends:
